@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Generate a <span id="title-span">random password</span></h1>
+        <p id="subtitle-el">Never use an insecure password again.</p>
+        <button id="generate-btn" onclick="generatePasswords()">Generate passwords</button>
+        <div class="slidecontainer">
+            <span id="pass-lenght">Set passwords lenght:</span>
+            <input type="range" min="7" max="15" value="15" class="slider" id="myRange">
+            <p>Value: <span id="slider-value"></span></p>
+        </div>
+       
+        <div class="line-1"></div>
+        
+        <p id="passwordOne-el"></p>
+        <p id="passwordTwo-el"></p>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
