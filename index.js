@@ -5,12 +5,12 @@ const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","
 let passwordOneEl=document.getElementById("passwordOne-el")
 let passwordTwoEl=document.getElementById("passwordTwo-el")
 let passwordLenght=15
-let slider= document.getElementById("myRange")
-let output= document.getElementById("slider-value")
+//let slider= document.getElementById("myRange")
+//let output= document.getElementById("slider-value")
 
-slider.oninput = function() {
-    output.textContent = this.value;
-  }
+//slider.oninput = function() {
+    //output.textContent = this.value;
+  //}
 
 
 
@@ -32,5 +32,32 @@ function generatePassword(){
 function generatePasswords(){
     passwordOneEl.textContent=generatePassword()
     passwordTwoEl.textContent= generatePassword()
+    
+    
 }
 
+passwordOneEl.onclick=function(){
+    document.execCommand("copy");
+}
+
+
+passwordOneEl.addEventListener("copy", function(event){
+    event.preventDefault();
+    if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", passwordOneEl.textContent);
+    console.log(event.clipboardData.getData("text"))
+    }
+})
+
+passwordTwoEl.onclick=function(){
+    document.execCommand("copy");
+}
+
+
+passwordTwoEl.addEventListener("copy", function(event){
+    event.preventDefault();
+    if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", passwordTwoEl.textContent);
+    console.log(event.clipboardData.getData("text"))
+    }
+})
